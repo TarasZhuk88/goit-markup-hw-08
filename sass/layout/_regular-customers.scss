@@ -1,0 +1,57 @@
+/*Постоянные клиенты*/
+
+.regular-customers {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    svg {
+      fill: #afb1b8;
+      transition: all 250ms linear;
+    }
+  }
+  
+  .regular-customers-list-item {
+    display: flex;
+     li {
+      width: 170px;
+      height: 90px;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    & li:not(:last-child) {
+      margin-right: 30px;
+    }
+  } 
+
+ .regular-customers-dr {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  transition: all 250ms linear;
+  &:hover,
+  &:focus {
+  border-color: $accent-color;
+  }
+  &:hover .regular-customers-svg,
+  &:focus .regular-customers-svg {
+  fill: $accent-color;
+  }
+}
+
+.regular-customers-link:focus .regular-customers-dr {
+  border-color: $accent-color;
+}
+.regular-customers-link:focus .regular-customers-svg {
+  fill: $accent-color;
+}
