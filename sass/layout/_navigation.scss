@@ -1,27 +1,5 @@
 /*для мобільного*/
-@media screen and (max-width: 767px) {
-.header-navigation, .navigation, .address-util  {
-  max-width: 480px;
-  height: 60px;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-
-
-
-
-}
-
-
-
-
+@media screen and (max-width: 767px) {}
 
 
 
@@ -98,8 +76,6 @@
   .address-tel:focus .address-tel-svg {
     fill: $accent-color;
   }*/
-  
-  
   
   .active {
     color: $accent-color;
