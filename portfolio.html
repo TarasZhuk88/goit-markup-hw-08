@@ -10,21 +10,34 @@
     />
     <link rel="stylesheet" href="./CSS/normalize.css" />
     <link rel="stylesheet" href="./CSS/maine.min.css" />
+    <style>
+      html {overflow-x: hidden;}
+  </style>
   </head>
   <body>
     <!--Шапка: Логотип, навігація, контакт email, тел-->
-    <header>
+
+    <header class="container">
       <!--навігація в шапці-->
       <div class="header-navigation">
+        <div class="logo-container">
+        <a
+        class="header-logo link"
+        aria-label="Логотип"
+        href="./index.html"
+        lang="en"
+       >
+        <span class="logo-web">Web</span> Studio</a
+       >
+      </div>
+      <button type="button" class="menu-btn" aria-expanded="true" aria-controls="menu-wrapper" data-menu-button>
+        <svg width="40" height="40">
+          <use class="icon-burger" href="./imeges/sprite.svg#icon-icon-menu-burger"></use>
+          <use class="icon-close" href="./imeges/sprite.svg#icon-close-burger"></use>
+        </svg>
+      </button>
+      <div class="menu-wrapper" data-menu>
         <nav class="navigation">
-          <a
-            class="header-logo link"
-            aria-label="Логотип"
-            href="./index.html"
-            lang="en"
-          >
-            <span class="logo-web">Web</span> Studio</a
-          >
           <ul class="navigation-list list">
             <li class="navigation-list-item">
               <a class="navigation-list-link link" href="./index.html"
@@ -32,9 +45,7 @@
               >
             </li>
             <li class="navigation-list-item navigation-line-portfolio">
-              <a
-                class="navigation-list-link link active"
-                href="./portfolio.html"
+              <a class="navigation-list-link link active" href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
@@ -49,24 +60,29 @@
           <address class="address">
             <ul class="address-list list">
               <li class="address-item">
-                <a class="address-emaile link" href="mailto:info@devstudio.com">
-                  <svg  class="address-emaile-svg" width="16" height="12">
+                <a class="address-emaile link" href="mailto:info@devstudio.com"
+                  ><svg class="address-emaile-svg" width="15" height="10">
                     <use href="./imeges/sprite.svg#icon-mail"></use>
-                  </svg>info@devstudio.com</a
-                ></a>
-              </li> 
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
               <li class="address-item">
-                <a class="address-tel link"href="tel:+380961111111"
-                  > <svg class="address-tel-svg" width="10" height="15">
-                    <use href="./imeges/sprite.svg#icon-phone-icon"  ></use>
-                  </svg>+38 096 111 11 11</a
+                <a class="address-tel link" href="tel:+380961111111"
+                  ><svg class="address-tel-svg" width="10" height="15">
+                    <use href="./imeges/sprite.svg#icon-phone-icon"></use>
+                  </svg>
+                  +38 096 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
       </div>
+      </div>
     </header>
+
+   
     <!--Портфоліо-->
     <main>
       <h1 hidden>Портфоліо</h1>
@@ -312,7 +328,7 @@
       </section>
     </main>
     <!--Footer: Лого, Адреса, Приєднуйтесь, Підписуйтесь-->
-    <footer class="footer-container footer">
+    <footer class="footer-container footer container">
       <!--<div class="footer-container">-->
       <div class="footer-div-container">
         <div class="footer-div-address">
@@ -324,7 +340,7 @@
           >
             <span class="logo-web">Web</span> Studio</a
           >
-          <address>
+          <address class="footer-address">
             <ul class="list">
               <li>
                 <a
@@ -334,7 +350,7 @@
                   >бульвар Лесі Українки, 26, Київ, 02000</a
                 >
               </li>
-              <li class="address-emaile-foote">
+              <li class="address-emaile-footer">
                 <a class="address-emaile link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
@@ -364,34 +380,32 @@
             <li class="social-list-item">
               <a
                 class="solcial-link-item footer-icon-link link"
-                aria-label="ссылка на твиттер" 
+                aria-label="ссылка на твиттер"
                 href="#"
                 ><svg class="solcial-icon-svg" width="20px" height="20px">
-                  <use href="./imeges/sprite.svg#icon-twitter"></use>
-                </svg></a>
+                  <use href="./imeges/sprite.svg#icon-twitter"></use></svg></a>
             </li>
             <li class="social-list-item">
               <a
                 class="solcial-link-item footer-icon-link link"
-                aria-label="ссылка на фейсбук" 
+                aria-label="ссылка на фейсбук"
                 href="#"
                 ><svg class="solcial-icon-svg" width="20px" height="20px">
-                  <use href="./imeges/sprite.svg#icon-facebook"></use>
-                </svg></a>
+                  <use href="./imeges/sprite.svg#icon-facebook"></use></svg></a>
             </li>
             <li class="social-list-item">
               <a
                 class="solcial-link-item footer-icon-link link"
-                aria-label="ссылка на линкедин" 
+                aria-label="ссылка на линкедин"
                 href="#"
                 ><svg class="solcial-icon-svg" width="20px" height="20px">
-                  <use href="./imeges/sprite.svg#icon-linkedin"></use>
-                </svg></a>
+                  <use href="./imeges/sprite.svg#icon-linkedin"></use></svg></a>
             </li>
           </ul>
         </div>
         <div class="sign-up">
           <b class="action">Подпишитесь на рассылку</b>
+          <form class="imput-footer">
           <div class="imput">
             <input
               type="text"
@@ -400,15 +414,22 @@
               placeholder="EMAILE"
             />
             <button class="footter-button button" type="submit">
-              Подписаться 
-              <svg class="solcial-icon-svg plane-icon-send" width="24px" height="24px">
+              Подписаться
+              <svg
+                class="effect-div plane-icon-send"
+                width="24px"
+                height="24px"
+              >
                 <use href="./imeges/sprite.svg#icon-planeiconsend"></use>
               </svg>
             </button>
+          </form>
           </div>
         </div>
       </div>
-      <!--</div>-->
     </footer>
+
+    <script src="./js/menu.js"></script>
+
   </body>
 </html>

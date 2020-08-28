@@ -10,10 +10,13 @@
     />
     <link href="./CSS/normalize.css" rel="stylesheet" />
     <link href="./CSS/maine.min.css" rel="stylesheet" />
+    <style>
+      html {overflow-x: hidden;}
+  </style>
   </head>
   <body>
     <!--Шапка: Логотип, навігація, контакт email, тел-->
-    <header>
+    <header class="container">
       <!--навігація в шапці-->
       <div class="header-navigation">
         <div class="logo-container">
@@ -26,13 +29,13 @@
         <span class="logo-web">Web</span> Studio</a
        >
       </div>
-      <button type="button" is-open class="menu-btn" aria-expanded="true" aria-controls="menu-wrapper" data-menu-button>
+      <button type="button" class="menu-btn" aria-expanded="true" aria-controls="menu-wrapper" data-menu-button>
         <svg width="40" height="40">
           <use class="icon-burger" href="./imeges/sprite.svg#icon-icon-menu-burger"></use>
           <use class="icon-close" href="./imeges/sprite.svg#icon-close-burger"></use>
         </svg>
       </button>
-      <div class="menu-wrapper is-open" data-menu>
+      <div class="menu-wrapper" data-menu>
         <nav class="navigation">
           <ul class="navigation-list list">
             <li class="navigation-list-item navigation-line-studio">
@@ -93,7 +96,7 @@
       </section>
 
       <!--наші стандарти-->
-      <section class="standards">
+      <section class="container">
         <div class="standards">
         <ul class="list-standards list">
           <li class="standards-list-item">
@@ -149,7 +152,7 @@
       </section>
 
       <!--Чем мы занимаемся-->
-      <section class="projects">
+      <section class="projects container">
         <div class="projects">
         <h2 class="second-title">Чем мы занимаемся</h2>
         <ul class="list">
@@ -198,7 +201,7 @@
       <!--Наша команда-->
       <section class="our-team-section">
         <!--<div class="our-team-section">-->
-        <div class="our-team">
+        <div class="our-team container">
           <h2 class="second-title">Наша команда</h2>
           <ul class="our-team-list list">
             <li class="our-team-list-item">
@@ -425,7 +428,7 @@
       </section>
 
       <!--Постоянные клиенты-->
-      <section class="regular-customers">
+      <section class="regular-customers container">
         <h2 class="second-title">Постоянные клиенты</h2>
         <div class="regular-customers-list">
           <ul class="regular-customers-list-item list">
@@ -490,7 +493,7 @@
       </section>
     </main>
     <!--Footer: Лого, Адреса, Приєднуйтесь, Підписуйтесь-->
-    <footer class="footer-container footer">
+    <footer class="footer-container footer container">
       <!--<div class="footer-container">-->
       <div class="footer-div-container">
         <div class="footer-div-address">
@@ -502,7 +505,7 @@
           >
             <span class="logo-web">Web</span> Studio</a
           >
-          <address>
+          <address class="footer-address">
             <ul class="list">
               <li>
                 <a
@@ -646,7 +649,7 @@
               id="comment"
               required
               rows="2"
-              style="width: 448px; height: 120px; margin: 0px;"></textarea>
+             ></textarea>
             <label class="label-comment" for="comment">Комментарий</label>
           </div>
           <div class="form-accept" >
@@ -665,6 +668,7 @@
         </div>
       </form>
     </section>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,7 +1,77 @@
 /*Постоянные клиенты*/
 
-.regular-customers {
-    width: 1200px;
+@media screen and (max-width: 767px) {
+  
+      .regular-customers {
+        max-width: 480px;
+        padding-top: 94px;
+        padding-bottom: 94px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        svg {
+          fill: #afb1b8;
+          transition: all 250ms linear;
+        }
+      }
+
+      .regular-customers-list-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        
+        li {
+          width: calc((100% - 60px) / 2);
+          height: 90px;
+          border: 1px solid #afb1b8;
+          border-radius: 4px;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 30px;
+        }
+        & li:nth-last-child(-n + 2) {
+          margin-bottom: 0px;
+      }
+
+        & li:nth-last-child(2n - 1) {
+          margin-left: 30px;
+      } 
+
+      } 
+
+      .regular-customers-dr {
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 90px;
+      transition: all 250ms linear;
+      &:hover,
+      &:focus {
+      border-color: $accent-color;
+      }
+      &:hover .regular-customers-svg,
+      &:focus .regular-customers-svg {
+      fill: $accent-color;
+      }
+      }
+
+      .regular-customers-link:focus .regular-customers-dr {
+      border-color: $accent-color;
+      }
+      .regular-customers-link:focus .regular-customers-svg {
+      fill: $accent-color;
+      }
+}
+
+
+@media screen and (min-width: 768px) {
+  .regular-customers {
+    width: 768px;
     padding-top: 94px;
     padding-bottom: 94px;
     padding-left: 15px;
@@ -13,32 +83,38 @@
       transition: all 250ms linear;
     }
   }
-  
+
   .regular-customers-list-item {
     display: flex;
-     li {
-      width: 170px;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      width: calc((100% - 60px) / 3);
       height: 90px;
       border: 1px solid #afb1b8;
       border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    & li:not(:last-child) {
       margin-right: 30px;
+      margin-bottom: 30px;
+    }
+    & li:nth-child(3n) {
+      margin-right: 0px;
+     }
+
+    & li:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
     }
   } 
 
- .regular-customers-dr {
+  .regular-customers-dr {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
   height: 90px;
   transition: all 250ms linear;
+
+  
   &:hover,
   &:focus {
   border-color: $accent-color;
@@ -47,11 +123,71 @@
   &:focus .regular-customers-svg {
   fill: $accent-color;
   }
+  }
+
+  .regular-customers-link:focus .regular-customers-dr {
+  border-color: $accent-color;
+  }
+  .regular-customers-link:focus .regular-customers-svg {
+  fill: $accent-color;
+  }
 }
 
-.regular-customers-link:focus .regular-customers-dr {
-  border-color: $accent-color;
-}
-.regular-customers-link:focus .regular-customers-svg {
-  fill: $accent-color;
+@media screen and (min-width: 1200px) {
+    
+    .regular-customers {
+      width: 1200px;
+      padding-top: 94px;
+      padding-bottom: 94px;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto;
+      margin-right: auto;
+      svg {
+        fill: #afb1b8;
+        transition: all 250ms linear;
+      }
+    }
+
+    .regular-customers-list-item {
+      display: flex;
+      li {
+        width: 170px;
+        height: 90px;
+        border: 1px solid #afb1b8;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      & li:not(:last-child) {
+        margin-right: 30px;
+      }
+    } 
+
+    .regular-customers-dr {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+    transition: all 250ms linear;
+    &:hover,
+    &:focus {
+    border-color: $accent-color;
+    }
+    &:hover .regular-customers-svg,
+    &:focus .regular-customers-svg {
+    fill: $accent-color;
+    }
+    }
+
+    .regular-customers-link:focus .regular-customers-dr {
+    border-color: $accent-color;
+    }
+    .regular-customers-link:focus .regular-customers-svg {
+    fill: $accent-color;
+    }
 }

@@ -52,7 +52,7 @@
 .our-team-section {
   background: #f5f4fa;
   .our-team {
-    width: 1200px;
+    max-width: 480px;
     padding-top: 94px;
     padding-bottom: 94px;
     padding-right: 15px;
@@ -60,19 +60,15 @@
     margin-right: auto;
     margin-left: auto;
   }
-  .our-team-list {
-    display: flex;
-  }
 }
 
 .our-team-list-item {
-  width: 270px;
   background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
   }
   img {
     margin-bottom: 0px;
@@ -86,9 +82,8 @@
 }
 .social-list {
   display: flex;
+  justify-content: center;
   margin-top: 16px;
-  margin-right: 32px;
-  margin-left: 32px;
 }
 .social-list-item:not(:last-child) {
   margin-right: 10px;
@@ -96,8 +91,8 @@
 }
 
 
-
-/*.manager-name {
+@media screen and (min-width: 768px) {
+  .manager-name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -114,10 +109,10 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $text-light-theme-color;
-  } */
+  } 
 
     /*Соціальні іконки*/ 
-   /* .solcial-link-item {
+   .solcial-link-item {
       display: block;
       width: 44px;
       height: 44px;
@@ -136,14 +131,115 @@
       &:focus .solcial-icon-svg {
       fill: $solcial-icon-white-color;
     }
-}*/
+}
 /*хз даний клас є і в портфоліо і в стандартах,
  в п-5шт в с-20шт може винести в бейс ??? */  
-/*.solcial-icon-svg {
+.solcial-icon-svg {
   fill: #afb1b8;
-}*/
+}
 /*Наша команда*/
-/*.our-team-section {
+.our-team-section {
+  background: #f5f4fa;
+  .our-team {
+    width: 768px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.our-team-list-item {
+  width: 354px;
+  background: #ffffff;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+  &:nth-last-child(2n - 1) {
+    margin-left: 30px;
+  }
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+}
+  img {
+    margin-bottom: 0px;
+  }
+}
+.our-team-list-container {
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16px;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  .manager-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-light-theme-color;
+    margin-bottom: 10px;
+  }
+  
+  .profesion {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $text-light-theme-color;
+  } 
+
+    /*Соціальні іконки*/ 
+   .solcial-link-item {
+      display: block;
+      width: 44px;
+      height: 44px;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 250ms linear;
+      &:hover,
+      &:focus {
+      background-color: $accent-color;
+    }
+      &:hover .solcial-icon-svg,
+      &:focus {
+      fill: $solcial-icon-white-color;
+    }
+      &:focus .solcial-icon-svg {
+      fill: $solcial-icon-white-color;
+    }
+}
+/*хз даний клас є і в портфоліо і в стандартах,
+ в п-5шт в с-20шт може винести в бейс ??? */  
+.solcial-icon-svg {
+  fill: #afb1b8;
+}
+/*Наша команда*/
+.our-team-section {
   background: #f5f4fa;
   .our-team {
     width: 1200px;
@@ -186,4 +282,7 @@
 }
 .social-list-item:not(:last-child) {
   margin-right: 10px;
-}*/
+}
+
+}
+

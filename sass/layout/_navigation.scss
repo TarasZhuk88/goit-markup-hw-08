@@ -17,6 +17,23 @@
     justify-content: space-between;
     display: flex;
   }
+  .menu-btn {
+    &.is-open {
+      .icon-close {
+        display: block;
+      }
+
+      .icon-burger {
+        display: none;
+      }
+    }
+  }
+
+  .menu-btn .icon-close {
+    display: none;
+  }
+
+
   .menu-wrapper {
     position: absolute;
     display: flex;
@@ -110,21 +127,12 @@
     & svg {fill: $accent-color}
   }
   
- /* .address-emaile:hover .address-emaile-svg,
-  .address-emaile:focus .address-emaile-svg {
-    fill: $accent-color;
-  }*/
-  
   .address-tel:hover,
   .address-tel:focus {
     color: $accent-color;
     & svg {fill: $accent-color;} 
   }
-  
-  /*.address-tel:hover .address-tel-svg,
-  .address-tel:focus .address-tel-svg {
-    fill: $accent-color;
-  }*/
+
   
   .active {
     color: $accent-color;
@@ -156,7 +164,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 60px;
-  /*align-items:baseline;*/
 }
 
 
@@ -188,11 +195,158 @@
   
 }
 
-
-
+@media screen and (min-width: 768px) {
 
 /*опис лого*/
-/*.menu-wrapper {
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-logo {
+    font-family: $secondary-font;
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+    color: #000000;
+    margin-right: 75px;
+    &:hover,
+    &:focus {
+    color: $accent-color;
+  }
+  }
+  .header-navigation {
+    width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #ececec;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  .logo-web {
+    color: #2196f3;
+  }
+  
+  .menu-btn {
+    display: none;
+  }
+  
+  
+  .navigation-list-link,
+  .address-tel,
+  .address-emaile {
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: $text-light-theme-color;
+  }
+
+  .address-tel,
+  .address-emaile {
+    display: flex;
+    align-items: center;
+    fill: #757575;
+  }
+  /*HOVER&FOCUS*/
+
+.address-emaile:hover,
+  .address-emaile:focus {
+    color: $accent-color;
+    & svg {fill: $accent-color}
+  }
+  
+.address-emaile:hover .address-emaile-svg,
+  .address-emaile:focus .address-emaile-svg {
+    fill: $accent-color;
+  }
+  
+ .address-tel:hover,
+  .address-tel:focus {
+    color: $accent-color;
+    & svg {fill: $accent-color;} 
+  }
+
+.address-tel:hover .address-tel-svg,
+  .address-tel:focus .address-tel-svg {
+    fill: $accent-color;
+  }
+  
+  .active {
+    color: $accent-color;
+  }
+  
+  
+  /*Декоративні ефекти + Векторна графіка*/
+ .navigation-line-studio::after {
+    display: block;
+    background-color: $accent-color;
+    width: 47px;
+    height: 4px;
+    content: "";
+    border-radius: 2px;
+    transition: all 250ms linear;
+  }
+  /*лого + навігація*/
+
+.navigation-list-link {
+  padding-top: 34px;
+  padding-bottom: 34px;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items:baseline;
+  margin-right: 75px;
+}
+
+
+.navigation-list,
+.address-util,
+.address-list {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+.address-item {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-right: 10px;
+  }
+  
+}
+}
+
+@media screen and (min-width: 1200px) {
+  
+
+/*опис лого*/
+.menu-wrapper {
   display: flex;
   
 }
@@ -225,7 +379,7 @@
     color: #2196f3;
   }
   
-  
+ 
   
   .navigation-list-link,
   .address-tel,
@@ -243,38 +397,38 @@
     display: flex;
     align-items: center;
     fill: #757575;
-  }*/
+  }
   /*HOVER&FOCUS*/
 
- /* .address-emaile:hover,
+.address-emaile:hover,
   .address-emaile:focus {
     color: $accent-color;
     & svg {fill: $accent-color}
-  }*/
+  }
   
- /* .address-emaile:hover .address-emaile-svg,
+.address-emaile:hover .address-emaile-svg,
   .address-emaile:focus .address-emaile-svg {
     fill: $accent-color;
-  }*/
+  }
   
- /* .address-tel:hover,
+ .address-tel:hover,
   .address-tel:focus {
     color: $accent-color;
     & svg {fill: $accent-color;} 
   }
-  */
-  /*.address-tel:hover .address-tel-svg,
+
+.address-tel:hover .address-tel-svg,
   .address-tel:focus .address-tel-svg {
     fill: $accent-color;
-  }*/
+  }
   
- /* .active {
+  .active {
     color: $accent-color;
-  }*/
+  }
   
   
   /*Декоративні ефекти + Векторна графіка*/
- /* .navigation-line-studio::after {
+ .navigation-line-studio::after {
     display: block;
     background-color: $accent-color;
     width: 47px;
@@ -282,32 +436,32 @@
     content: "";
     border-radius: 2px;
     transition: all 250ms linear;
-  }*/
+  }
   /*лого + навігація*/
 
-/*.navigation-list-link {
+.navigation-list-link {
   padding-top: 34px;
   padding-bottom: 34px;
   &:hover,
   &:focus {
     color: $accent-color;
   }
-}*/
+}
 
-/*.navigation {
+.navigation {
   display: flex;
   align-items:baseline;
-}*/
+}
 
 
-/*.navigation-list,
+.navigation-list,
 .address-util,
 .address-list {
   display: flex;
   align-items: center;
-}*/
+}
 
-/*.navigation-list-item:not(:last-child) {
+.navigation-list-item:not(:last-child) {
   margin-right: 50px;
 }
 .address-item {
@@ -320,7 +474,7 @@
     margin-right: 30px;
   }
   
-}*/
+}
 
-
+}
 
