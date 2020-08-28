@@ -655,12 +655,16 @@ textarea:focus {
 @media screen and (max-width: 767px) {
   .header-navigation {
     position: relative;
-    width: 480px;
+    max-width: 480px;
     height: 60px;
     /*padding-left: 15px;
     padding-right: 15px;*/
     margin-left: auto;
     margin-right: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-bottom: 1px solid #ececec;
     align-items: center;
     justify-content: space-between;
@@ -670,15 +674,36 @@ textarea:focus {
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 99;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding-top: 118px;
+    background-color: #fff;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    opacity: 0;
+    animation-duration: 1000ms;
+    display: none;
+  }
+  .menu-wrapper.is-open {
+    display: block;
+    opacity: 1;
+    animation-name: linear;
+  }
+  .logo-container {
+    z-index: 100;
   }
   .header-logo {
     font-family: "Raleway", sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #000000;
-    margin-right: 85px;
   }
   .header-logo:hover, .header-logo:focus {
     color: #2196f3;
@@ -686,15 +711,34 @@ textarea:focus {
   .logo-web {
     color: #2196f3;
   }
+  .menu-btn {
+    position: relative;
+    z-index: 100;
+    height: 40px;
+    background-clip: transparent;
+    border: none;
+    padding: 0;
+  }
+  .menu-btn.is-open .icon-close {
+    display: block;
+  }
+  .menu-btn.is-open.icon-burger {
+    display: none;
+  }
   .navigation-list-link,
   .address-tel,
   .address-emaile {
+    display: flex;
+    /*flex-direction: column;*/
     font-weight: 500;
     font-size: 14px;
     font-style: normal;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: #757575;
+  }
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 40px;
   }
   .address-tel,
   .address-emaile {
@@ -734,32 +778,37 @@ textarea:focus {
   .navigation-line-studio::after {
     display: block;
     background-color: #2196f3;
-    width: 47px;
+    width: 100%;
     height: 4px;
     content: "";
     border-radius: 2px;
+    bottom: 0;
     transition: all 250ms linear;
   }
   /*лого + навігація*/
   .navigation-list-link {
-    padding-top: 34px;
-    padding-bottom: 34px;
+    padding-bottom: 8px;
   }
   .navigation-list-link:hover, .navigation-list-link:focus {
     color: #2196f3;
   }
   .navigation {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
     /*align-items:baseline;*/
   }
   .navigation-list,
   .address-util,
   .address-list {
     display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-  .navigation-list-item:not(:last-child) {
-    margin-right: 50px;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.167;
   }
   .address-item {
     display: flex;
@@ -769,7 +818,7 @@ textarea:focus {
     margin-right: 10px;
   }
   .address-item:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 16px;
   }
 }
 
@@ -892,9 +941,89 @@ textarea:focus {
   }
   
 }*/
+/*ДЛЯ МОБІЛКИ*/
+@media screen and (max-width: 767px) {
+  .decorative-img {
+    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../imeges/Header-img/Headerimg.jpg);
+    max-width: 480px;
+    height: 400px;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+    background-size: cover;
+  }
+  .container-h1 {
+    flex-grow: 1;
+    display: block;
+    align-items: center;
+    max-width: 480px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container-h1 .maine-taitle {
+    margin-top: 118px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .container-h1 .button {
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 00px;
+    margin-bottom: 118px;
+    background: #2196f3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: all 250ms linear;
+  }
+  .container-h1 .button:hover, .container-h1 .button:focus {
+    background-color: #7ec0f7;
+  }
+  .h1-slaider {
+    background: rgba(47, 48, 58, 0.8);
+  }
+  .text-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+  }
+}
+
 /*Заголовок опиши */
-.decorative-img {
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../imeges/Header-img/Headerimg.jpg);
+/*.decorative-img {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../imeges/Header-img/Headerimg.jpg);
   max-width: 1600px;
   height: 600px;
   background-repeat: no-repeat;
@@ -913,57 +1042,134 @@ textarea:focus {
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.container-h1 .maine-taitle {
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.container-h1 .button {
-  margin-left: auto;
-  margin-right: auto;
-  margin: auto;
-  display: flex;
-  width: 200px;
-  height: 50px;
-  padding-top: 0px;
-  padding-bottom: 00px;
-  background: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
-  transition: all 250ms linear;
-}
-
-.container-h1 .button:hover, .container-h1 .button:focus {
-  background-color: #7ec0f7;
+  .maine-taitle {
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $title-dark-theme-color;
+  }
+  
+  .button {
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    display: flex;
+    width: 200px;
+    height: 50px;
+    padding-top: 0px;
+    padding-bottom: 00px;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: all 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: $accent-color-button;
+    }
+  }
 }
 
 .h1-slaider {
   background: rgba(47, 48, 58, 0.8);
 }
-
-.text-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  .text-button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $title-dark-theme-color;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }*/
+/*Для мобілки*/
+@media screen and (max-width: 767px) {
+  .satandards-items {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    /*text-align: center;*/
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    /*padding-top: 27px;
+    padding-bottom: 27px;*/
+    /*background: rgba(47, 48, 58, 0.8);*/
+    color: --title-light-theme-color;
+  }
+  .second-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    color: #212121;
+  }
+  /*Декоративні ефекти + Векторна графіка*/
+  .standards-br-svg {
+    display: inline-block;
+    height: 120px;
+    max-width: 480px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+  }
+  .standards-br-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /*наші стандарти*/
+  .standards {
+    max-width: 480px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+    /*color: #757575;*/
+    max-width: 480px;
+  }
+  .list-standards {
+    display: flex;
+    flex-direction: column;
+  }
+  /*.standards-list-item:not(:last-child) {
+    margin-right: 30px;
+  }*/
+  .standards-img {
+    width: 270px;
+    height: 120px;
+    left: 215px;
+    top: 774px;
+    background: #f5f4fa;
+    border-radius: 4px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
+  }
 }
 
 /*Наші Стандарти+Чем мы занимаемся*/
@@ -1108,106 +1314,184 @@ textarea:focus {
 }
 
 /*Наша Команда*/
-.manager-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
-  margin-bottom: 10px;
+/*для мобільного*/
+@media screen and (max-width: 767px) {
+  /*ЩЕ ДЛЯ МОБ НІЧОГО НЕ ПРАВИВ !!!!!*/
+  .manager-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+  .profesion {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #757575;
+  }
+  /*Соціальні іконки*/
+  .solcial-link-item {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 250ms linear;
+  }
+  .solcial-link-item:hover, .solcial-link-item:focus {
+    background-color: #2196f3;
+  }
+  .solcial-link-item:hover .solcial-icon-svg, .solcial-link-item:focus {
+    fill: #ffffff;
+  }
+  .solcial-link-item:focus .solcial-icon-svg {
+    fill: #ffffff;
+  }
+  /*хз даний клас є і в портфоліо і в стандартах,
+ в п-5шт в с-20шт може винести в бейс ??? */
+  .solcial-icon-svg {
+    fill: #afb1b8;
+  }
+  /*Наша команда*/
+  .our-team-section {
+    background: #f5f4fa;
+  }
+  .our-team-section .our-team {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .our-team-section .our-team-list {
+    display: flex;
+  }
+  .our-team-list-item {
+    width: 270px;
+    background: #ffffff;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .our-team-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .our-team-list-item img {
+    margin-bottom: 0px;
+  }
+  .our-team-list-container {
+    background-color: #ffffff;
+    border-radius: 0px 0px 4px 4px;
+    padding-top: 30px;
+    padding-bottom: 24px;
+  }
+  .social-list {
+    display: flex;
+    margin-top: 16px;
+    margin-right: 32px;
+    margin-left: 32px;
+  }
+  .social-list-item:not(:last-child) {
+    margin-right: 10px;
+  }
 }
 
-.profesion {
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 1.19;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #757575;
-}
-
+/*.manager-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-light-theme-color;
+    margin-bottom: 10px;
+  }
+  
+  .profesion {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $text-light-theme-color;
+  } */
 /*Соціальні іконки*/
-.solcial-link-item {
-  display: block;
-  width: 44px;
-  height: 44px;
-  padding: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 250ms linear;
-}
-
-.solcial-link-item:hover, .solcial-link-item:focus {
-  background-color: #2196f3;
-}
-
-.solcial-link-item:hover .solcial-icon-svg, .solcial-link-item:focus {
-  fill: #ffffff;
-}
-
-.solcial-link-item:focus .solcial-icon-svg {
-  fill: #ffffff;
-}
-
+/* .solcial-link-item {
+      display: block;
+      width: 44px;
+      height: 44px;
+      padding: 12px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 250ms linear;
+      &:hover,
+      &:focus {
+      background-color: $accent-color;
+    }
+      &:hover .solcial-icon-svg,
+      &:focus {
+      fill: $solcial-icon-white-color;
+    }
+      &:focus .solcial-icon-svg {
+      fill: $solcial-icon-white-color;
+    }
+}*/
 /*хз даний клас є і в портфоліо і в стандартах,
  в п-5шт в с-20шт може винести в бейс ??? */
-.solcial-icon-svg {
+/*.solcial-icon-svg {
   fill: #afb1b8;
-}
-
+}*/
 /*Наша команда*/
-.our-team-section {
+/*.our-team-section {
   background: #f5f4fa;
-}
-
-.our-team-section .our-team {
-  width: 1200px;
-  padding-top: 94px;
-  padding-bottom: 94px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.our-team-section .our-team-list {
-  display: flex;
+  .our-team {
+    width: 1200px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .our-team-list {
+    display: flex;
+  }
 }
 
 .our-team-list-item {
   width: 270px;
   background: #ffffff;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+  img {
+    margin-bottom: 0px;
+  }
 }
-
-.our-team-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.our-team-list-item img {
-  margin-bottom: 0px;
-}
-
 .our-team-list-container {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   padding-top: 30px;
   padding-bottom: 24px;
 }
-
 .social-list {
   display: flex;
   margin-top: 16px;
   margin-right: 32px;
   margin-left: 32px;
 }
-
 .social-list-item:not(:last-child) {
   margin-right: 10px;
-}
-
+}*/
 /*Постоянные клиенты*/
 .regular-customers {
   width: 1200px;

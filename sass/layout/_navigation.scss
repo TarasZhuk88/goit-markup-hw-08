@@ -2,12 +2,16 @@
 @media screen and (max-width: 767px) {
   .header-navigation {
     position: relative;
-    width: 480px;
+    max-width: 480px;
     height: 60px;
     /*padding-left: 15px;
     padding-right: 15px;*/
     margin-left: auto;
     margin-right: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
     border-bottom: 1px solid #ececec;
     align-items: center;
     justify-content: space-between;
@@ -17,15 +21,37 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    z-index: 99;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding-top: 118px;
+    background-color: #fff;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    opacity: 0;
+    animation-duration: 1000ms;
+    display: none;
+    
+  &.is-open {
+    display: block;
+    opacity: 1;
+    animation-name: linear;
+        }
+  }
+  .logo-container{
+    z-index: 100;
   }
   .header-logo {
     font-family: $secondary-font;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: #000000;
-    margin-right: 85px;
     &:hover,
     &:focus {
     color: $accent-color;
@@ -35,12 +61,29 @@
   .logo-web {
     color: #2196f3;
   }
-  
+  .menu-btn {
+    position: relative;
+    z-index: 100;
+    height: 40px;
+    background-clip: transparent;
+    border: none;
+    padding: 0;
+    &.is-open {
+      .icon-close {
+        display: block;
+      }
+      &.icon-burger {
+        display: none;
+      }
+    }
+  }
   
   
   .navigation-list-link,
   .address-tel,
   .address-emaile {
+    display: flex;
+    /*flex-direction: column;*/
     font-weight: 500;
     font-size: 14px;
     font-style: normal;
@@ -48,6 +91,10 @@
     letter-spacing: 0.02em;
     color: $text-light-theme-color;
   }
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  
 
   .address-tel,
   .address-emaile {
@@ -88,17 +135,17 @@
   .navigation-line-studio::after {
     display: block;
     background-color: $accent-color;
-    width: 47px;
+    width: 100%;
     height: 4px;
     content: "";
     border-radius: 2px;
+    bottom: 0;
     transition: all 250ms linear;
   }
   /*лого + навігація*/
 
 .navigation-list-link {
-  padding-top: 34px;
-  padding-bottom: 34px;
+  padding-bottom: 8px;
   &:hover,
   &:focus {
     color: $accent-color;
@@ -107,6 +154,8 @@
 
 .navigation {
   display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
   /*align-items:baseline;*/
 }
 
@@ -115,12 +164,16 @@
 .address-util,
 .address-list {
  display: flex;
-  align-items: center;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ justify-content: center;
+ margin: 0;
+ font-size: 18px;
+ line-height: 1.167;
 }
 
-.navigation-list-item:not(:last-child) {
-  margin-right: 50px;
-}
+
 .address-item {
   display: flex;
   align-items: center;
@@ -128,7 +181,7 @@
     margin-right: 10px;
   }
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 16px;;
   }
   
 }

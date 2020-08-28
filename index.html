@@ -16,15 +16,23 @@
     <header>
       <!--навігація в шапці-->
       <div class="header-navigation">
+        <div class="logo-container">
         <a
         class="header-logo link"
         aria-label="Логотип"
         href="./index.html"
         lang="en"
-      >
+       >
         <span class="logo-web">Web</span> Studio</a
-      >
-      <div class="menu-wrapper is-open">
+       >
+      </div>
+      <button type="button" is-open class="menu-btn" aria-expanded="true" aria-controls="menu-wrapper" data-menu-button>
+        <svg width="40" height="40">
+          <use class="icon-burger" href="./imeges/sprite.svg#icon-icon-menu-burger"></use>
+          <use class="icon-close" href="./imeges/sprite.svg#icon-close-burger"></use>
+        </svg>
+      </button>
+      <div class="menu-wrapper is-open" data-menu>
         <nav class="navigation">
           <ul class="navigation-list list">
             <li class="navigation-list-item navigation-line-studio">
