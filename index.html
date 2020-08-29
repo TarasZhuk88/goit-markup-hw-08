@@ -160,7 +160,8 @@
             <div class="studio-effect-text-div">
               <img
                 class="img"
-                src="./imeges/Чем-мы-занимаемся/desktop.jpg"
+                srcset="./imeges/Чем-мы-занимаемся/desktop1.jpg 1x, ./imeges/Чем-мы-занимаемся/desktop1@2x.jpg 2x"
+                src="./imeges/Чем-мы-занимаемся/desktop01.jpg"
                 alt="фото ноутбука"
                 width="370"
                 height="294"
@@ -172,8 +173,9 @@
           </li>
           <li class="list-img">
             <div class="studio-effect-text-div">
-              <img
-                src="./imeges/Чем-мы-занимаемся/mob.jpg"
+              <img 
+              srcset="./imeges/Чем-мы-занимаемся/mob2.jpg 1x, ./imeges/Чем-мы-занимаемся/mob2@2x.jpg 2x"
+                src="./imeges/Чем-мы-занимаемся/mob02.jpg"
                 alt="фото мобильного телефона"
                 width="370"
               />
@@ -185,7 +187,8 @@
           <li class="list-img">
             <div class="studio-effect-text-div">
               <img
-                src="./imeges/Чем-мы-занимаемся/designsolutions.jpg"
+              srcset="./imeges/Чем-мы-занимаемся/designsolutions3.jpg 1x, ./imeges/Чем-мы-занимаемся/designsolutions3@2x.jpg 2x"
+                src="./imeges/Чем-мы-занимаемся/designsolutions03.jpg"
                 alt="фото монитора"
                 width="370"
               />
@@ -205,15 +208,25 @@
           <h2 class="second-title">Наша команда</h2>
           <ul class="our-team-list list">
             <li class="our-team-list-item">
-              <img
+              <picture>
+                <source  srcset="./imeges/Наша-команда/igor-pc.jpg 1x, ./images/igor-pc@2x.jpg 2x" 
+                    media="(min-width: 1200px)">
+                <source srcset="./imeges/Наша-команда/igor-tab.jpg 1x, ./images/igor-tab@2x.jpg 2x" 
+                    media="(min-width: 768px)">
+                <source srcset="./imeges/Наша-команда/igor-mob.jpg 1x, ./images/igor-mob@2x.jpg 2x" 
+                    media="(max-width: 767px)">
+                <img src="./imeges/Наша-команда/igor-pc.jpg" alt="Игорь">
+              </picture>
+              <!--<img
                 class="manager"
+                srcset=""
                 src="./imeges/Наша-команда/nikolay.jpg"
                 alt="фото менеджера Дизайнер продукта"
                 width="270"
                 height="260"
-              />
+              />-->
               <div class="our-team-list-container">
-                <h3 class="manager-name">Николай Кучеренко</h3>
+                <h3 class="manager-name">Игорь Демьяненко</h3>
                 <p class="profesion" lang="en">Product Designer</p>
 
                 <ul class="social-list list">
@@ -260,15 +273,24 @@
               </div>
             </li>
             <li class="our-team-list-item">
-              <img
+              <picture>
+                <source  srcset="./imeges/Наша-команда/olga-pc.jpg 1x, ./images/olga-pc@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./imeges/Наша-команда/olga-tab.jpg 1x, ./images/olga-tab@2x.jpg 2x" 
+                    media="(min-width: 768px)">
+                <source srcset="./imeges/Наша-команда/olga-mob.jpg 1x, ./images/olga-mob@2x.jpg 2x" 
+                    media="(max-width: 767px)">
+                <img src="./imeges/Наша-команда/olga-pc.jpg" alt="Игорь">
+              </picture>
+              <!--<img
                 class="manager"
                 src="./imeges/Наша-команда/olga.jpg"
                 alt="фото менеджера Фронтенд Разработчика"
                 width="270"
                 height="260"
-              />
+              />-->
               <div class="our-team-list-container">
-                <h3 class="manager-name">Ольга Иванова</h3>
+                <h3 class="manager-name">Ольга Репина</h3>
                 <p class="profesion" lang="en">Frontend Developer</p>
                 <ul class="social-list list">
                   <li class="social-list-item">
@@ -315,15 +337,24 @@
             </li>
 
             <li class="our-team-list-item">
-              <img
+              <picture>
+                <source  srcset="./imeges/Наша-команда/nikolay-pc.jpg 1x, ./images/nikolay-pc@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./imeges/Наша-команда/nikolay-tab.jpg 1x, ./images/nikolay-tab@2x.jpg 2x" 
+                    media="(min-width: 768px)">
+                <source srcset="./imeges/Наша-команда/nikolay-mob.jpg 1x, ./images/nikolay-mob@2x.jpg 2x" 
+                    media="(max-width: 767px)">
+                <img src="./imeges/Наша-команда/nikolay-pc.jpg" alt="Игорь">
+              </picture>
+              <!--<img
                 class="manager"
                 src="./imeges/Наша-команда/andrew.jpg"
                 alt="фото менеджера Маркетолога"
                 width="270"
                 height="260"
-              />
+              />-->
               <div class="our-team-list-container">
-                <h3 class="manager-name">Андрей Шевченко</h3>
+                <h3 class="manager-name">Николай Тарасов</h3>
                 <p class="profesion" lang="en">Marketing</p>
                 <ul class="social-list list">
                   <li class="social-list-item">
@@ -369,15 +400,24 @@
               </div>
             </li>
             <li class="our-team-list-item">
-              <img
+              <picture>
+                <source  srcset="./imeges/Наша-команда/misha-pc.jpg 1x, ./images/misha-pc@2x.jpg 2x" 
+                media="(min-width: 1200px)">
+                <source srcset="./imeges/Наша-команда/misha-tab.jpg 1x, ./images/misha-tab@2x.jpg 2x" 
+                    media="(min-width: 768px)">
+                <source srcset="./imeges/Наша-команда/misha-mob.jpg 1x, ./images/misha-mob@2x.jpg 2x" 
+                    media="(max-width: 767px)">
+                <img src="./imeges/Наша-команда/misha-pc.jpg" alt="Игорь">
+              </picture>
+              <!--<img
                 class="manager"
                 src="./imeges/Наша-команда/ivan.jpg"
                 alt="фото менеджера Дизайнера интерфейса"
                 width="270"
                 height="260"
-              />
+              />-->
               <div class="our-team-list-container">
-                <h3 class="manager-name">Иван Николаев</h3>
+                <h3 class="manager-name">Михаил Ермаков</h3>
                 <p class="profesion" lang="en">UI Designer</p>
                 <ul class="social-list list">
                   <li class="social-list-item">
