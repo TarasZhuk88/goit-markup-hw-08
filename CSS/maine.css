@@ -1124,7 +1124,6 @@ textarea:focus {
   .navigation-list-link,
   .address-tel,
   .address-emaile {
-    display: flex;
     align-items: center;
     flex-direction: column;
     font-weight: 500;
