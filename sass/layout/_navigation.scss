@@ -458,7 +458,13 @@
 .address-util,
 .address-list {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+}
+.address-list {
+  display: flex;
+  align-items: baseline;
+  margin-left: 200px;
+  flex-direction: row;
 }
 
 .navigation-list-item:not(:last-child) {

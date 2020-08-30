@@ -438,6 +438,7 @@ textarea:focus {
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
+    overflow-x: hidden;
   }
 }
 
@@ -446,6 +447,7 @@ textarea:focus {
     width: 768px;
     margin-right: auto;
     margin-left: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -456,6 +458,7 @@ textarea:focus {
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
+    overflow-x: hidden;
   }
 }
 
@@ -1438,7 +1441,13 @@ textarea:focus {
   .address-util,
   .address-list {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+  }
+  .address-list {
+    display: flex;
+    align-items: baseline;
+    margin-left: 200px;
+    flex-direction: row;
   }
   .navigation-list-item:not(:last-child) {
     margin-right: 50px;
@@ -1907,12 +1916,15 @@ textarea:focus {
   .standards-list-item {
     margin-bottom: 30px;
   }
+  .standards-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
   .standards-list-item:nth-last-child(-n + 2) {
     margin-bottom: 0px;
   }
-  .standards-list-item:nth-last-child(2n - 1) {
-    margin-right: 30px;
-  }
+  /*.standards-list-item:nth-last-child(2n - 1) {
+  margin-right: 30px;
+}*/
   .standards-img {
     width: 354px;
     height: 120px;
@@ -1978,6 +1990,9 @@ textarea:focus {
   }
   .list-standards {
     display: flex;
+  }
+  .standards-list-item {
+    margin-bottom: 0px;
   }
   .standards-list-item:not(:last-child) {
     margin-right: 30px;
@@ -2216,7 +2231,7 @@ textarea:focus {
     margin-bottom: 30px;
   }
   .our-team-list-item:nth-last-child(2n - 1) {
-    margin-right: 30px;
+    margin-left: 30px;
   }
   .our-team-list-item:nth-last-child(-n + 2) {
     margin-bottom: 0px;
@@ -2304,9 +2319,15 @@ textarea:focus {
     background: #ffffff;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 0px 0px 4px 4px;
+    margin-left: 0px;
   }
   .our-team-list-item:not(:last-child) {
+    margin-left: 0px;
     margin-right: 30px;
+    margin-bottom: 0px;
+  }
+  .our-team-list-item:nth-last-child(2n - 1) {
+    margin-left: 0px;
   }
   .our-team-list-item img {
     margin-bottom: 0px;
@@ -2533,17 +2554,22 @@ textarea:focus {
   }
   .portfolio-works-item {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     background: #ffffff;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
+    /*&:nth-last-child(-n + 3) {
+    margin-bottom: 30px;
+      }
+      &:last-child
+      margin-bottom: 0px;*/
   }
   .portfolio-works-item a:hover,
   .portfolio-works-item a:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   }
-  .portfolio-works-item:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
+  .portfolio-works-item:not(:last-child) {
+    margin-bottom: 30px;
   }
   .portfolio-works-text {
     padding-top: 20px;
@@ -2687,8 +2713,18 @@ textarea:focus {
   .portfolio-works-item:nth-child(2n) {
     margin-right: 0px;
   }
-  .portfolio-works-item::nth-last-child(-n + 2) {
+  .portfolio-works-item:nth-last-child(2n) {
+    margin-right: 0px;
+  }
+  .portfolio-works-item:nth-last-child(-n + 2) {
     margin-bottom: 0px;
+  }
+  .portfolio-works-item:nth-last-child(-n + 3) {
+    margin-bottom: 30px;
+  }
+  .portfolio-works-item:last-child {
+    margin-bottom: 0px;
+    margin-right: 0px;
   }
   .portfolio-works-text {
     padding-top: 20px;
@@ -2828,6 +2864,9 @@ textarea:focus {
   .portfolio-works-item a:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
   }
+  .portfolio-works-item:nth-child(2n) {
+    margin-right: 30px;
+  }
   .portfolio-works-item:nth-child(3n) {
     margin-right: 0px;
   }
@@ -2961,6 +3000,9 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     margin-bottom: 60px;
+  }
+  .footer-container .footer-div-address .address-emaile, .footer-container .footer-div-address .address-tel {
+    flex-direction: column;
   }
   .footer-container .footer-adres {
     font-style: normal;
@@ -3132,6 +3174,13 @@ textarea:focus {
     margin-right: 69px;
     margin-bottom: 60px;
   }
+  .footer-container .footer-div-address .address-emaile-foote {
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-container .address-emaile, .footer-container .address-tel {
+    flex-direction: column;
+  }
   .footer-container .footer-adres {
     font-style: normal;
     font-weight: normal;
@@ -3198,7 +3247,8 @@ textarea:focus {
     width: 100%;
   }
   .imput .footer-actions-input-text-emaile {
-    width: calc((100% - 30px) / 1);
+    width: 450px;
+    /*width: calc((100% - 30px) / 1);*/
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -3277,6 +3327,7 @@ textarea:focus {
 
 @media screen and (min-width: 1200px) {
   .footer-container {
+    width: 100%;
     background: #2f303a;
   }
   .footer-container .footer-logo {
@@ -3292,11 +3343,20 @@ textarea:focus {
     margin-right: auto;
     align-items: baseline;
     display: flex;
+    flex-wrap: nowrap;
   }
   .footer-container .footer-div-address {
     display: flex;
     flex-direction: column;
     margin-right: 69px;
+    margin-bottom: 0px;
+    align-items: flex-start;
+  }
+  .footer-container .footer-list-adres {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .footer-container .footer-adres {
     font-style: normal;
@@ -3318,11 +3378,13 @@ textarea:focus {
     margin-top: 20px;
   }
   .join-social-link {
-    margin-right: 94px;
+    margin-right: auto;
+    margin-bottom: 0px;
   }
   .join-social-link ul {
     margin-left: 0px;
     margin-right: 0px;
+    margin: auto;
   }
   .join-social-link .solcial-icon-svg {
     fill: #ffffff;
@@ -3337,9 +3399,14 @@ textarea:focus {
     width: 570px;
     height: 86px;
     margin-left: auto;
+    align-items: flex-start;
   }
   .imput {
     display: flex;
+    margin-left: auto;
+    margin-right: 0;
+    flex-direction: row;
+    align-items: baseline;
   }
   .imput .footer-actions-input-text-emaile {
     width: 358px;
@@ -3416,6 +3483,7 @@ textarea:focus {
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: -webkit-auto;
     color: #ffffff;
   }
   .action:hover, .action:focus {

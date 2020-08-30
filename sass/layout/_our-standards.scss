@@ -222,14 +222,17 @@
 .standards-list-item {
   margin-bottom: 30px;
 }
+.standards-list-item:not(:last-child){
+  margin-right: 30px;
+}
 
 .standards-list-item:nth-last-child(-n + 2) {
   margin-bottom: 0px;
 }
 
-.standards-list-item:nth-last-child(2n - 1) {
+/*.standards-list-item:nth-last-child(2n - 1) {
   margin-right: 30px;
-}
+}*/
 
 .standards-img {
   width: 354px;
@@ -301,6 +304,9 @@
 }
 .list-standards {
   display: flex;
+}
+.standards-list-item {
+  margin-bottom: 0px;
 }
 .standards-list-item:not(:last-child) {
   margin-right: 30px;

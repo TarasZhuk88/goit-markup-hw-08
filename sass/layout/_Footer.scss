@@ -23,6 +23,9 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 60px;
+            .address-emaile, .address-tel {
+              flex-direction: column;
+            }
           }
           .footer-adres {
             font-style: normal;
@@ -212,7 +215,14 @@
       justify-content: center;
       margin-right: 69px;
       margin-bottom: 60px;
+      .address-emaile-foote   {align-items: center;
+        justify-content: center;}
     }
+    .address-emaile, .address-tel {
+      flex-direction: column;
+    }
+
+
     .footer-adres {
       font-style: normal;
       font-weight: normal;
@@ -290,7 +300,8 @@
     width: 100%;
 
     .footer-actions-input-text-emaile {
-      width: calc((100% - 30px) / 1);
+      width: 450px;
+      /*width: calc((100% - 30px) / 1);*/
       height: 50px;
       border: 1px solid rgba(255, 255, 255, 0.3);
       box-sizing: border-box;
@@ -378,6 +389,7 @@
 @media screen and (min-width: 1200px) {
 
         .footer-container {
+          width: 100%;
           background: #2f303a;
           .footer-logo {
             margin-bottom: 20px;
@@ -392,11 +404,20 @@
             margin-right: auto;
             align-items: baseline;
             display: flex;
+            flex-wrap: nowrap;
           }
           .footer-div-address {
             display: flex;
             flex-direction: column;
             margin-right: 69px;
+            margin-bottom: 0px;
+            align-items: flex-start;
+          }
+          .footer-list-adres {
+            align-items: start;
+            display: flex;
+              flex-direction: column;
+              justify-content: center;
           }
           .footer-adres {
             font-style: normal;
@@ -406,6 +427,7 @@
             line-height: 1.71;
             letter-spacing: 0.03em;
             color: $title-dark-theme-color;
+            
           &:hover,
           &:focus {
             color: $accent-color;
@@ -422,10 +444,12 @@
         }
 
         .join-social-link {
-          margin-right: 94px;
+          margin-right:auto;
+          margin-bottom: 0px;
           ul {
             margin-left: 0px;
             margin-right: 0px;
+            margin: auto;
           }
           .solcial-icon-svg {
             fill: $solcial-icon-white-color;
@@ -443,10 +467,15 @@
           width: 570px;
           height: 86px;
           margin-left: auto;
+          align-items: flex-start;
         }
         
         .imput {
           display: flex;
+          margin-left: auto;
+          margin-right: 0;
+          flex-direction: row;
+          align-items: baseline;
           .footer-actions-input-text-emaile {
             width: 358px;
             height: 50px;
@@ -529,6 +558,7 @@
         line-height: 1.14;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        text-align: -webkit-auto;
         color: $title-dark-theme-color;
         &:hover,
         &:focus {

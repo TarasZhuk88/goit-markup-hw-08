@@ -10,34 +10,21 @@
     />
     <link rel="stylesheet" href="./CSS/normalize.css" />
     <link rel="stylesheet" href="./CSS/maine.min.css" />
-    <style>
-      html {overflow-x: hidden;}
-  </style>
   </head>
   <body>
     <!--Шапка: Логотип, навігація, контакт email, тел-->
-
-    <header class="container">
+    <header>
       <!--навігація в шапці-->
       <div class="header-navigation">
-        <div class="logo-container">
-        <a
-        class="header-logo link"
-        aria-label="Логотип"
-        href="./index.html"
-        lang="en"
-       >
-        <span class="logo-web">Web</span> Studio</a
-       >
-      </div>
-      <button type="button" class="menu-btn" aria-expanded="true" aria-controls="menu-wrapper" data-menu-button>
-        <svg width="40" height="40">
-          <use class="icon-burger" href="./imeges/sprite.svg#icon-icon-menu-burger"></use>
-          <use class="icon-close" href="./imeges/sprite.svg#icon-close-burger"></use>
-        </svg>
-      </button>
-      <div class="menu-wrapper" data-menu>
         <nav class="navigation">
+          <a
+            class="header-logo link"
+            aria-label="Логотип"
+            href="./index.html"
+            lang="en"
+          >
+            <span class="logo-web">Web</span> Studio</a
+          >
           <ul class="navigation-list list">
             <li class="navigation-list-item">
               <a class="navigation-list-link link" href="./index.html"
@@ -45,7 +32,9 @@
               >
             </li>
             <li class="navigation-list-item navigation-line-portfolio">
-              <a class="navigation-list-link link active" href="./portfolio.html"
+              <a
+                class="navigation-list-link link active"
+                href="./portfolio.html"
                 >Портфолио</a
               >
             </li>
@@ -60,29 +49,24 @@
           <address class="address">
             <ul class="address-list list">
               <li class="address-item">
-                <a class="address-emaile link" href="mailto:info@devstudio.com"
-                  ><svg class="address-emaile-svg" width="15" height="10">
+                <a class="address-emaile link" href="mailto:info@devstudio.com">
+                  <svg  class="address-emaile-svg" width="16" height="12">
                     <use href="./imeges/sprite.svg#icon-mail"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
+                  </svg>info@devstudio.com</a
+                ></a>
+              </li> 
               <li class="address-item">
-                <a class="address-tel link" href="tel:+380961111111"
-                  ><svg class="address-tel-svg" width="10" height="15">
-                    <use href="./imeges/sprite.svg#icon-phone-icon"></use>
-                  </svg>
-                  +38 096 111 11 11</a
+                <a class="address-tel link"href="tel:+380961111111"
+                  > <svg class="address-tel-svg" width="10" height="15">
+                    <use href="./imeges/sprite.svg#icon-phone-icon"  ></use>
+                  </svg>+38 096 111 11 11</a
                 >
               </li>
             </ul>
           </address>
         </div>
       </div>
-      </div>
     </header>
-
-   
     <!--Портфоліо-->
     <main>
       <h1 hidden>Портфоліо</h1>
@@ -124,19 +108,20 @@
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
                       <div class="effect-div">
+
                         <picture>
-                          <source srcset="./imeges/Портфоліо/portfolio1-desk.jpg 1x, ./images/Портфоліо/portfolio1-desk@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio1-desk.jpg 1x, ./imeges/Портфоліо/portfolio1-desk@2x.jpg 2x" 
                               media="(min-width: 1200px)">
-                          <source srcset="./imeges/Портфоліо/portfolio1-tab.jpg 1x, ./images/Портфоліо/portfolio1-tab@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio1-tab.jpg 1x, ./imeges/Портфоліо/portfolio1-tab@2x.jpg 2x" 
                               media="(min-width: 768px)">
-                          <source srcset="./imeges/Портфоліо/portfolio1-mob.jpg 1x, ./images/Портфоліо/portfolio1-mob@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio1-mob.jpg 1x, ./imeges/Портфоліо/portfolio1-mob@2x.jpg 2x" 
                               media="(max-width: 767px)">
-                          <img src="./imeges/Портфоліо/portfolio1-desk.jpg" alt="Технокряк">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio1-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
                       </picture>
-                      <!--<img class="img"
-                      src="./imeges/Портфоліо/технокряк1.jpg"
-                      alt="фото веб-сайту технокряк"
-                      width="370"/>-->
+                      
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -154,19 +139,20 @@
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
                       <div class="effect-div">
-                        <picture>
-                          <source srcset="./imeges/Портфоліо/portfolio2-desk.jpg 1x, ./images/Портфоліо/portfolio2-desk@2x.jpg 2x" 
+
+                       <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio2-desk.jpg 1x, ./imeges/Портфоліо/portfolio2-desk@2x.jpg 2x" 
                               media="(min-width: 1200px)">
-                          <source srcset="./imeges/Портфоліо/portfolio2-tab.jpg 1x, ./images/Портфоліо/portfolio2-tab@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio2-tab.jpg 1x, ./imeges/Портфоліо/portfolio2-tab@2x.jpg 2x" 
                               media="(min-width: 768px)">
-                          <source srcset="./imeges/Портфоліо/portfolio2-mob.jpg 1x, ./images/Портфоліо/portfolio2-mob@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio2-mob.jpg 1x, ./imeges/Портфоліо/portfolio2-mob@2x.jpg 2x" 
                               media="(max-width: 767px)">
-                          <img src="./imeges/Портфоліо/portfolio2-desk.jpg" alt="Технокряк">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio2-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
                       </picture>
-                      <!--<img class="img"
-                      src="./imeges/Портфоліо/постер2.jpg"
-                      alt="Фото постера баскетболістів"
-                      width="370"/>-->
+                      
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -184,19 +170,20 @@
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
                       <div class="effect-div">
-                        <picture>
-                          <source srcset="./imeges/Портфоліо/portfolio3-desk.jpg 1x, ./images/Портфоліо/portfolio3-desk@2x.jpg 2x" 
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio3-desk.jpg 1x, ./imeges/Портфоліо/portfolio3-desk@2x.jpg 2x" 
                               media="(min-width: 1200px)">
-                          <source srcset="./imeges/Портфоліо/portfolio3-tab.jpg 1x, ./images/Портфоліо/portfolio3-tab@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio3-tab.jpg 1x, ./imeges/Портфоліо/portfolio3-tab@2x.jpg 2x" 
                               media="(min-width: 768px)">
-                          <source srcset="./imeges/Портфоліо/portfolio3-mob.jpg 1x, ./images/Портфоліо/portfolio3-mob@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio3-mob.jpg 1x, ./imeges/Портфоліо/portfolio3-mob@2x.jpg 2x" 
                               media="(max-width: 767px)">
-                          <img src="./imeges/Портфоліо/portfolio3-desk.jpg" alt="Технокряк">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio3-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
                       </picture>
-                      <!--<img class="img"
-                      src="./imeges/Портфоліо/ресторан3.jpg"
-                      alt="фото веб-сайту технокряк"
-                      width="370"/>-->
+                      
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -216,19 +203,20 @@
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
                       <div class="effect-div">
-                        <picture>
-                          <source srcset="./imeges/Портфоліо/portfolio4-desk.jpg 1x, ./images/Портфоліо/portfolio4-desk@2x.jpg 2x" 
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio4-desk.jpg 1x, ./imeges/Портфоліо/portfolio4-desk@2x.jpg 2x" 
                               media="(min-width: 1200px)">
-                          <source srcset="./imeges/Портфоліо/portfolio4-tab.jpg 1x, ./images/Портфоліо/portfolio4-tab@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio4-tab.jpg 1x, ./imeges/Портфоліо/portfolio4-tab@2x.jpg 2x" 
                               media="(min-width: 768px)">
-                          <source srcset="./imeges/Портфоліо/portfoli4-mob.jpg 1x, ./images/Портфоліо/portfolio4-mob@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio4-mob.jpg 1x, ./imeges/Портфоліо/portfolio4-mob@2x.jpg 2x" 
                               media="(max-width: 767px)">
-                          <img src="./imeges/Портфоліо/portfolio4-desk.jpg" alt="Технокряк">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio4-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
                       </picture>
-                      <!--<img class="img"
-                      src="./imeges/Портфоліо/prime4.jpg"
-                      alt="фото веб-сайту технокряк"
-                      width="370"/>-->
+
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -249,19 +237,20 @@
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
                       <div class="effect-div">
-                        <picture>
-                          <source srcset="./imeges/Портфоліо/portfolio5-desk.jpg 1x, ./images/Портфоліо/portfolio5-desk@2x.jpg 2x" 
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio5-desk.jpg 1x, ./imeges/Портфоліо/portfolio5-desk@2x.jpg 2x" 
                               media="(min-width: 1200px)">
-                          <source srcset="./imeges/Портфоліо/portfolio5-tab.jpg 1x, ./images/Портфоліо/portfolio5-tab@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio5-tab.jpg 1x, ./imeges/Портфоліо/portfolio5-tab@2x.jpg 2x" 
                               media="(min-width: 768px)">
-                          <source srcset="./imeges/Портфоліо/portfolio5-mob.jpg 1x, ./images/Портфоліо/portfolio5-mob@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio5-mob.jpg 1x, ./imeges/Портфоліо/portfolio5-mob@2x.jpg 2x" 
                               media="(max-width: 767px)">
-                          <img src="./imeges/Портфоліо/portfolio5-desk.jpg" alt="Технокряк">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio5-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
                       </picture>
-                      <!--<img class="img"
-                      src="./imeges/Портфоліо/boxes5.jpg"
-                      alt="фото веб-сайту технокряк"
-                      width="370"/>-->
+
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -280,20 +269,21 @@
             <li class="portfolio-works-item">
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
-                  <picture>
-                    <source srcset="./imeges/Портфоліо/portfolio6-desk.jpg 1x, ./images/Портфоліо/portfolio6-desk@2x.jpg 2x" 
-                        media="(min-width: 1200px)">
-                    <source srcset="./imeges/Портфоліо/portfolio6-tab.jpg 1x, ./images/Портфоліо/portfolio6-tab@2x.jpg 2x" 
-                        media="(min-width: 768px)">
-                    <source srcset="./imeges/Портфоліо/portfolio6-mob.jpg 1x, ./images/Портфоліо/portfolio6-mob@2x.jpg 2x" 
-                        media="(max-width: 767px)">
-                    <img src="./imeges/Портфоліо/portfolio6-desk.jpg" alt="Технокряк">
-                </picture>
-                      <!--<div class="effect-div">
-                      <img class="img"
-                      src="./imeges/Портфоліо/borders6.jpg"
-                      alt="фото веб-сайту технокряк"
-                      width="370"/>-->
+                      <div class="effect-div">
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio6-desk.jpg 1x, ./imeges/Портфоліо/portfolio6-desk@2x.jpg 2x" 
+                              media="(min-width: 1200px)">
+                          <source srcset="./imeges/Портфоліо/portfolio6-tab.jpg 1x, ./imeges/Портфоліо/portfolio6-tab@2x.jpg 2x" 
+                              media="(min-width: 768px)">
+                          <source srcset="./imeges/Портфоліо/portfolio6-mob.jpg 1x, ./imeges/Портфоліо/portfolio6-mob@2x.jpg 2x" 
+                              media="(max-width: 767px)">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio6-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
+                      </picture>
+
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -312,20 +302,21 @@
             <li class="portfolio-works-item">
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
-                  <picture>
-                    <source srcset="./imeges/Портфоліо/portfolio7-desk.jpg 1x, ./images/Портфоліо/portfolio7-desk@2x.jpg 2x" 
-                        media="(min-width: 1200px)">
-                    <source srcset="./imeges/Портфоліо/portfolio7-tab.jpg 1x, ./images/Портфоліо/portfolio7-tab@2x.jpg 2x" 
-                        media="(min-width: 768px)">
-                    <source srcset="./imeges/Портфоліо/portfolio7-mob.jpg 1x, ./images/Портфоліо/portfolio7-mob@2x.jpg 2x" 
-                        media="(max-width: 767px)">
-                    <img src="./imeges/Портфоліо/portfolio7-desk.jpg" alt="Технокряк">
-                </picture>
-                      <!--<div class="effect-div">
-                      <img class="img"
-                      src="./imeges/Портфоліо/limitededition7.jpg"
-                      alt="фото веб-сайту технокряк"
-                      width="370"/>-->
+                      <div class="effect-div">
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio7-desk.jpg 1x, ./imeges/Портфоліо/portfolio7-desk@2x.jpg 2x" 
+                              media="(min-width: 1200px)">
+                          <source srcset="./imeges/Портфоліо/portfolio7-tab.jpg 1x, ./imeges/Портфоліо/portfolio7-tab@2x.jpg 2x" 
+                              media="(min-width: 768px)">
+                          <source srcset="./imeges/Портфоліо/portfolio7-mob.jpg 1x, ./imeges/Портфоліо/portfolio7-mob@2x.jpg 2x" 
+                              media="(max-width: 767px)">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio7-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
+                      </picture>
+
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -344,20 +335,21 @@
             <li class="portfolio-works-item">
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
-                  <picture>
-                    <source srcset="./imeges/Портфоліо/portfolio8-desk.jpg 1x, ./images/Портфоліо/portfolio8-desk@2x.jpg 2x" 
-                        media="(min-width: 1200px)">
-                    <source srcset="./imeges/Портфоліо/portfolio8-tab.jpg 1x, ./images/Портфоліо/portfolio8-tab@2x.jpg 2x" 
-                        media="(min-width: 768px)">
-                    <source srcset="./imeges/Портфоліо/portfolio8-mob.jpg 1x, ./images/Портфоліо/portfolio8-mob@2x.jpg 2x" 
-                        media="(max-width: 767px)">
-                    <img src="./imeges/Портфоліо/portfolio8-desk.jpg" alt="Технокряк">
-                </picture>
-                      <!--<div class="effect-div">
-                      <img class="img"
-                      src="./imeges/Портфоліо/lab8.jpg"
-                      alt="Фото постера баскетболістів"
-                      width="370"/>-->
+                      <div class="effect-div">
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio8-desk.jpg 1x, ./imeges/Портфоліо/portfolio8-desk@2x.jpg 2x" 
+                              media="(min-width: 1200px)">
+                          <source srcset="./imeges/Портфоліо/portfolio8-tab.jpg 1x, ./imeges/Портфоліо/portfolio8-tab@2x.jpg 2x" 
+                              media="(min-width: 768px)">
+                          <source srcset="./imeges/Портфоліо/portfolio8-mob.jpg 1x, ./imeges/Портфоліо/portfolio8-mob@2x.jpg 2x" 
+                              media="(max-width: 767px)">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio8-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
+                      </picture>
+
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -375,19 +367,20 @@
               <a class="portfolio-focus-item link" href="">
                 <div class="effect-item-div">
                       <div class="effect-div">
-                        <picture>
-                          <source srcset="./imeges/Портфоліо/portfolio9-desk.jpg 1x, ./images/Портфоліо/portfolio9-desk@2x.jpg 2x" 
+
+                      <picture>
+                          <source srcset="./imeges/Портфоліо/portfolio9-desk.jpg 1x, ./imeges/Портфоліо/portfolio9-desk@2x.jpg 2x" 
                               media="(min-width: 1200px)">
-                          <source srcset="./imeges/Портфоліо/portfolio9-tab.jpg 1x, ./images/Портфоліо/portfolio9-tab@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio9-tab.jpg 1x, ./imeges/Портфоліо/portfolio9-tab@2x.jpg 2x" 
                               media="(min-width: 768px)">
-                          <source srcset="./imeges/Портфоліо/portfolio9-mob.jpg 1x, ./images/Портфоліо/portfolio9-mob@2x.jpg 2x" 
+                          <source srcset="./imeges/Портфоліо/portfolio9-mob.jpg 1x, ./imeges/Портфоліо/portfolio9-mob@2x.jpg 2x" 
                               media="(max-width: 767px)">
-                          <img src="./imeges/Портфоліо/portfolio9-desk.jpg" alt="Технокряк">
+                              <img class="img"
+                              src="./imeges/Портфоліо/portfolio9-desk.jpg"
+                              alt="фото веб-сайту технокряк"
+                              />
                       </picture>
-                      <!--<img class="img"
-                      src="./imeges/Портфоліо/growingbusiness9.jpg"
-                      alt="Фото постера баскетболістів"
-                      width="370"/>-->
+
                       <p class="text portfolio-effect-text">
                         Технокряк это современная площадка распространения
                         коронавируса. Компании используют эту платформу для цифрового
@@ -409,7 +402,7 @@
       </section>
     </main>
     <!--Footer: Лого, Адреса, Приєднуйтесь, Підписуйтесь-->
-    <footer class="footer-container footer container">
+    <footer class="footer-container footer">
       <!--<div class="footer-container">-->
       <div class="footer-div-container">
         <div class="footer-div-address">
@@ -421,8 +414,8 @@
           >
             <span class="logo-web">Web</span> Studio</a
           >
-          <address class="footer-address">
-            <ul class="list">
+          <address>
+            <ul class="list footer-list-adres">
               <li>
                 <a
                   class="footer-adres link"
@@ -431,7 +424,7 @@
                   >бульвар Лесі Українки, 26, Київ, 02000</a
                 >
               </li>
-              <li class="address-emaile-footer">
+              <li class="address-emaile-foote">
                 <a class="address-emaile link" href="mailto:info@devstudio.com"
                   >info@devstudio.com</a
                 >
@@ -461,32 +454,34 @@
             <li class="social-list-item">
               <a
                 class="solcial-link-item footer-icon-link link"
-                aria-label="ссылка на твиттер"
+                aria-label="ссылка на твиттер" 
                 href="#"
                 ><svg class="solcial-icon-svg" width="20px" height="20px">
-                  <use href="./imeges/sprite.svg#icon-twitter"></use></svg></a>
+                  <use href="./imeges/sprite.svg#icon-twitter"></use>
+                </svg></a>
             </li>
             <li class="social-list-item">
               <a
                 class="solcial-link-item footer-icon-link link"
-                aria-label="ссылка на фейсбук"
+                aria-label="ссылка на фейсбук" 
                 href="#"
                 ><svg class="solcial-icon-svg" width="20px" height="20px">
-                  <use href="./imeges/sprite.svg#icon-facebook"></use></svg></a>
+                  <use href="./imeges/sprite.svg#icon-facebook"></use>
+                </svg></a>
             </li>
             <li class="social-list-item">
               <a
                 class="solcial-link-item footer-icon-link link"
-                aria-label="ссылка на линкедин"
+                aria-label="ссылка на линкедин" 
                 href="#"
                 ><svg class="solcial-icon-svg" width="20px" height="20px">
-                  <use href="./imeges/sprite.svg#icon-linkedin"></use></svg></a>
+                  <use href="./imeges/sprite.svg#icon-linkedin"></use>
+                </svg></a>
             </li>
           </ul>
         </div>
         <div class="sign-up">
           <b class="action">Подпишитесь на рассылку</b>
-          <form class="imput-footer">
           <div class="imput">
             <input
               type="text"
@@ -495,22 +490,15 @@
               placeholder="EMAILE"
             />
             <button class="footter-button button" type="submit">
-              Подписаться
-              <svg
-                class="effect-div plane-icon-send"
-                width="24px"
-                height="24px"
-              >
+              Подписаться 
+              <svg class="solcial-icon-svg plane-icon-send" width="24px" height="24px">
                 <use href="./imeges/sprite.svg#icon-planeiconsend"></use>
               </svg>
             </button>
-          </form>
           </div>
         </div>
       </div>
+      <!--</div>-->
     </footer>
-
-    <script src="./js/menu.js"></script>
-
   </body>
 </html>

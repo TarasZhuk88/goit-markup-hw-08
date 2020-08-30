@@ -211,3 +211,15 @@ text portfolio-effect-text
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+<picture>
+                          <source srcset="./imeges/Портфоліо/portfolio1-desk.jpg 1x, ./images/Портфоліо/portfolio1-desk@2x.jpg 2x" 
+                              media="(min-width: 1200px)">
+                          <source srcset="./imeges/Портфоліо/portfolio1-tab.jpg 1x, ./images/Портфоліо/portfolio1-tab@2x.jpg 2x" 
+                              media="(min-width: 768px)">
+                          <source srcset="./imeges/Портфоліо/portfolio1-mob.jpg 1x, ./images/Портфоліо/portfolio1-mob@2x.jpg 2x" 
+                              media="(max-width: 767px)">
+                          <img src="./imeges/Портфоліо/portfolio1-desk.jpg" alt="Технокряк">
+                      </picture>
+
+
+                       <img src="./imeges/Портфоліо/portfolio1-desk.jpg" alt="Технокряк">
