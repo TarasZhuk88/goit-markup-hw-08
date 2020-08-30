@@ -223,3 +223,72 @@ text portfolio-effect-text
 
 
                        <img src="./imeges/Портфоліо/portfolio1-desk.jpg" alt="Технокряк">
+
+
+                       @media screen and (min-width: 768px) {
+      
+/*Наші Стандарти+Чем мы занимаемся*/
+.satandards-items {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  color: (--title-light-theme-color);
+}
+
+.second-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  color: $title-light-theme-color;
+}
+/*Декоративні ефекти + Векторна графіка*/
+.standards-br-svg {
+  display: inline-block;
+  height: 120px;
+  width: 270px;
+  margin-bottom: 30px;
+  background-color: $secondary-bg-color;
+}
+.standards-br-svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 354px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+/*наші стандарти*/
+
+.standards {
+  padding-top: 94px;
+  padding-bottom: 47px;
+  width: 768px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $text-light-theme-color;
+  width: 270px;
+}
+.list-standards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,7 +1,6 @@
 /*для мобільного*/
 @media screen and (max-width: 767px) {
   .header-navigation {
-    position: relative;
     max-width: 480px;
     height: 60px;
     /*padding-left: 15px;
@@ -100,6 +99,7 @@
   .address-tel,
   .address-emaile {
     display: flex;
+    align-items: center;
     flex-direction: column;
     font-weight: 500;
     font-size: 14px;
@@ -107,18 +107,19 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $text-light-theme-color;
+    fill: #757575;
   }
   .navigation-list-item:not(:last-child) {
     margin-bottom: 40px;
   }
   
 
-  .address-tel,
+  /*.address-tel,
   .address-emaile {
     display: flex;
     align-items: center;
     fill: #757575;
-  }
+  }*/
   /*HOVER&FOCUS*/
 
   .address-emaile:hover,

@@ -31,14 +31,16 @@
   .standards-br-svg {
     display: inline-block;
     height: 120px;
+    width: 100%;
     max-width: 100%;
-    margin-bottom: 30px;
     background-color: $secondary-bg-color;
-  }
-  .standards-br-svg {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f5f4fa;
+    border-radius: 4px;
+    padding: 25px 100px;
+    margin-bottom: 30px;
   }
   /*наші стандарти*/
 
@@ -72,21 +74,13 @@
   /*.standards-list-item:not(:last-child) {
     margin-right: 30px;
   }*/
-  .standards-img {
-    width: 100%;
-    height: 120px;
-    background: #f5f4fa;
-    border-radius: 4px;
-    padding: 25px 100px;
-    margin-bottom: 30px;
-  }
   
 }
 
-@media screen and (mim-width: 768px) {
-  
+/*@media screen and (mim-width: 768px) {
+  */
 /*Наші Стандарти+Чем мы занимаемся*/
-.satandards-items {
+/*.satandards-items {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -106,23 +100,18 @@
   letter-spacing: 0.03em;
   margin-bottom: 50px;
   color: $title-light-theme-color;
-}
+}*/
 /*Декоративні ефекти + Векторна графіка*/
-.standards-br-svg {
+/*.standards-br-svg {
   display: inline-block;
   height: 120px;
   width: 270px;
   margin-bottom: 30px;
   background-color: $secondary-bg-color;
-}
-.standards-br-svg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+}*/
 /*наші стандарти*/
 
-.standards {
+/*.standards {
   padding-top: 94px;
   padding-bottom: 47px;
   width: 1200px;
@@ -145,17 +134,7 @@
 .standards-list-item:not(:last-child) {
   margin-right: 30px;
 }
-.standards-img {
-  width: 270px;
-  height: 120px;
-  left: 215px;
-  top: 774px;
-  background: #f5f4fa;
-  border-radius: 4px;
-  padding: 25px 100px;
-  margin-bottom: 30px;
-}
-}
+}*/
 
 @media screen and (min-width: 768px) {
       
@@ -193,6 +172,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 354px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
 }
 /*наші стандарти*/
 
@@ -218,31 +203,26 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.standards-list-item:nth-last-child(-n + 2) {  margin-bottom: 0px;}
+.standards-list-item:nth-child(2n+1) {  margin-right: 30px;}
 
-.standards-list-item {
+/*.standards-list-item:nth-last-child(-n + 2) {  margin-bottom: 0px;}
+.standards-list-item:nth-last-child(2n - 1) {  margin-left: 30px;}*/
+
+
+/*.standards-list-item {
   margin-bottom: 30px;
 }
 .standards-list-item:not(:last-child){
   margin-right: 30px;
-}
-
-.standards-list-item:nth-last-child(-n + 2) {
-  margin-bottom: 0px;
-}
-
-/*.standards-list-item:nth-last-child(2n - 1) {
-  margin-right: 30px;
 }*/
 
-.standards-img {
-  width: 354px;
-  height: 120px;
-  background: #f5f4fa;
-  border-radius: 4px;
-  padding: 25px 100px;
-  margin-bottom: 30px;
+/*.standards-list-item:nth-last-child(-n + 2) {
+  margin-bottom: 0px;
 }
-
+.standards-list-item:nth-last-child(2n - 1) {
+  margin-right: 30px;
+}*/
 }
 
 
@@ -308,9 +288,7 @@
 .standards-list-item {
   margin-bottom: 0px;
 }
-.standards-list-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .standards-img {
   width: 270px;
   height: 120px;
@@ -321,6 +299,7 @@
   padding: 25px 100px;
   margin-bottom: 30px;
 }
+.standards-list-item:not(:last-child) {  margin-right: 30px;}
 
 }
 
