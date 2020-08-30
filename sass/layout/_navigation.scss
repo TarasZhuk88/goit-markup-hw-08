@@ -100,7 +100,7 @@
   .address-tel,
   .address-emaile {
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     font-weight: 500;
     font-size: 14px;
     font-style: normal;
@@ -170,14 +170,14 @@
 .navigation-list,
 .address-util,
 .address-list {
- display: flex;
- flex-direction: column;
- align-items: center;
- text-align: center;
- justify-content: center;
- margin: 0;
- font-size: 18px;
- line-height: 1.167;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.167;
 }
 
 
@@ -268,7 +268,7 @@
     fill: $accent-color;
   }
   
- .address-tel:hover,
+  .address-tel:hover,
   .address-tel:focus {
     color: $accent-color;
     & svg {fill: $accent-color;} 

@@ -1126,7 +1126,7 @@ textarea:focus {
   .address-tel,
   .address-emaile {
     display: flex;
-    /*flex-direction: column;*/
+    flex-direction: column;
     font-weight: 500;
     font-size: 14px;
     font-style: normal;
