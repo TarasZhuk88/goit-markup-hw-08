@@ -24,6 +24,7 @@
             justify-content: center;
             margin-bottom: 60px;
             .address-emaile, .address-tel {
+              display: flex;
               flex-direction: column;
             }
           }

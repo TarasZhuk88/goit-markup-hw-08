@@ -70,71 +70,10 @@
   .list-standards {
     display: flex;
     flex-direction: column;
-  }
-  /*.standards-list-item:not(:last-child) {
-    margin-right: 30px;
-  }*/
-  
+  } 
 }
 
-/*@media screen and (mim-width: 768px) {
-  */
-/*Наші Стандарти+Чем мы занимаемся*/
-/*.satandards-items {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
-  color: (--title-light-theme-color);
-}
 
-.second-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-  color: $title-light-theme-color;
-}*/
-/*Декоративні ефекти + Векторна графіка*/
-/*.standards-br-svg {
-  display: inline-block;
-  height: 120px;
-  width: 270px;
-  margin-bottom: 30px;
-  background-color: $secondary-bg-color;
-}*/
-/*наші стандарти*/
-
-/*.standards {
-  padding-top: 94px;
-  padding-bottom: 47px;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: $text-light-theme-color;
-  width: 270px;
-}
-.list-standards {
-  display: flex;
-}
-.standards-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-}*/
 
 @media screen and (min-width: 768px) {
       
@@ -203,26 +142,10 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+.standards-list-item {margin-bottom: 30px;}
 .standards-list-item:nth-last-child(-n + 2) {  margin-bottom: 0px;}
 .standards-list-item:nth-child(2n+1) {  margin-right: 30px;}
 
-/*.standards-list-item:nth-last-child(-n + 2) {  margin-bottom: 0px;}
-.standards-list-item:nth-last-child(2n - 1) {  margin-left: 30px;}*/
-
-
-/*.standards-list-item {
-  margin-bottom: 30px;
-}
-.standards-list-item:not(:last-child){
-  margin-right: 30px;
-}*/
-
-/*.standards-list-item:nth-last-child(-n + 2) {
-  margin-bottom: 0px;
-}
-.standards-list-item:nth-last-child(2n - 1) {
-  margin-right: 30px;
-}*/
 }
 
 
